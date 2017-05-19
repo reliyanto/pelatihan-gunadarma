@@ -1,0 +1,64 @@
+{{>headerAdmin}}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail Praktikan</title>
+</head>
+<body>
+<div style="margin-top: 90px;" class="container ">
+        <div  class="col-md-7 col-md-offset-4 well ">
+            <div class="form-group text-center">
+                <h1 style="text-align: center; " class="judul "> Detail Praktikan <i class="fa fa-address-book" aria-hidden="true"></i>
+                </h1>
+                <hr class="garisLogin">
+            </div>
+            <div class="col-md-11">
+                <form class="daftar text-center" method="post" action="/update">
+                    <div>
+                        <div id="ketikEmail" class="form-group {{error}}">
+                            <div class="input-group ">
+                                <span class="input-group-addon">
+               <i class="fa fa-user-circle" aria-hidden="true"></i>
+             </span>
+                                <input class="form-control " name="no_mahasiswa" placeholder="No Mahasiswa" type="text" value="{{dataUser.no_mahasiswa}} ">
+                                </span>
+                            </div>
+                        </div>
+                        <div id="ketikPass" class="form-group  {{error}}">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+               <i class="fa fa-address-card-o" aria-hidden="true"></i>
+             </span>
+                                <input class="form-control" name="user_name" placeholder="Nama Mahasiswa" type="text" value="{{dataUser.user_name}}">
+                            </div>
+                        </div>
+                        <div id="ketikPass" class="form-group  {{error}}">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+               <i class="fa fa-address-card-o" aria-hidden="true"></i>
+             </span>
+                                <input class="form-control" name="user_id" placeholder="User ID" type="text" value="{{dataUser.user_id}}">
+                            </div>
+                        </div>
+                        <div id="ketikPass" class="form-group  {{error}}">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+               <i class="fa fa-address-card-o" aria-hidden="true"></i>
+             </span>
+                                <input class="form-control" name="nilai_praktikan" placeholder="Nilai" type="text" value="{{dataUser.nilai_praktikan}}">
+                            </div>
+                        </div>
+                        <div style="text-align: center;" id="pesan" class="form-group {{error}}">
+                          
+                            <button id="login" class="btn btn-raised btn-primary btn-lg" type="submit">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+{{>footer}}
